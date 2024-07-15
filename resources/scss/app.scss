@@ -1,1 +1,147 @@
-@import "~bootstrap/scss/bootstrap";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+li{
+    list-style-type: none;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+
+main{
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 80%;
+            nav{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                        li{
+                            margin: 0 1rem;
+                            padding: 3rem 0;
+                            text-transform: uppercase;
+                        };
+                };
+            };
+    }
+
+    .active{
+        border-bottom: 5px solid #0282f9;
+        color: #0282f9;
+    }
+}
+
+section.container-jumbo{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+        div{
+            background-color: #0282f9;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 268px;
+            left: 170px;
+            p{
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.5rem
+            };
+        }
+}
+
+
+section.list-products{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    width: 80%;
+    justify-content: center;
+
+    div{
+            background-color: #0282f9;
+            padding: .6rem 3rem;
+            align-self: center;
+            margin-bottom: 1rem;
+            p{
+                text-transform: uppercase;
+                color: white;
+            };
+        };
+};
+
+article.series_comics{
+            width: calc((100% / 6) - .8rem);
+            margin-right: .8rem;
+            margin-bottom: 3rem;
+
+            img{
+                width: 100%;
+                aspect-ratio: 1/1;
+                margin-bottom: .7rem;
+
+            };
+            p{
+                color: white;
+            }
+}
+
+
+.container-main{
+    background-color: #0282f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    ul{
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 1160px;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: .8rem;
+            text-transform: uppercase;
+            img{
+                margin: 0 .8rem;
+                width: 3rem;
+            }
+        };
+    };
+}
