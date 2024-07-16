@@ -18,53 +18,227 @@ Route::get('/', function () {
     $headerLinks = [
         [
             "id" => 1,
-            "name" => 'Characters',
-            "active" => false,
+            "name" => 'home',
+            "url" => '/',
         ],
         [
             "id" => 2,
             "name" => 'comics',
-            "active" => true,
+            "url" => '/comics',
         ],
         [
             "id" => 3,
             "name" => 'movies',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 4,
             "name" => 'tv',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 5,
             "name" => 'games',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 6,
             "name" => 'collectibles',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 7,
             "name" => 'videos',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 8,
             "name" => 'fans',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 9,
             "name" => 'news',
-            "active" => false,
+            "url" => '/',
         ],
         [
             "id" => 10,
             "name" => 'shop',
-            "active" => false,
+            "url" => '/',
+        ],
+    ];
+    $FooterLinksOne = [
+        [
+            "id" => 1,
+            "name" => 'Characters',
+        ],
+        [
+            "id" => 2,
+            "name" => 'comics',
+        ],
+        [
+            "id" => 3,
+            "name" => 'movies',
+        ],
+        [
+            "id" => 4,
+            "name" => 'tv',
+        ],
+        [
+            "id" => 5,
+            "name" => 'games',
+        ],
+        [
+            "id" => 6,
+            "name" => 'collectibles',
+        ],
+        [
+            "id" => 7,
+            "name" => 'videos',
+        ],
+        [
+            "id" => 8,
+            "name" => 'fans',
+        ],
+        [
+            "id" => 9,
+            "name" => 'news',
+        ],
+    ];
+    $FooterLinksOneShop = [
+        [
+            "id" => 1,
+            "name" => 'shop DC',
+        ],
+        [
+            "id" => 2,
+            "name" => 'shop DC collectibles',
+        ],
+    ];
+    $FooterLinksTwo = [
+        [
+            "id" => 1,
+            "name" => 'Terms Of Use',
+        ],
+        [
+            "id" => 2,
+            "name" => 'Privacy policy (new)',
+        ],
+        [
+            "id" => 3,
+            "name" => 'Ad Choices',
+        ],
+        [
+            "id" => 4,
+            "name" => 'Advertiosing',
+        ],
+        [
+            "id" => 5,
+            "name" => 'Jobs',
+        ],
+        [
+            "id" => 6,
+            "name" => 'Subscriptions',
+        ],
+        [
+            "id" => 7,
+            "name" => 'Talent Workshops',
+        ],
+        [
+            "id" => 8,
+            "name" => 'CPS Certificates',
+        ],
+        [
+            "id" => 9,
+            "name" => 'Ratings',
+        ],
+        [
+            "id" => 10,
+            "name" => 'Shop help',
+        ],
+        [
+            "id" => 11,
+            "name" => 'Contact Us',
+        ],
+    ];
+    $FooterLinksThree = [
+        [
+            "id" => 1,
+            "name" => 'DC',
+        ],
+        [
+            "id" => 2,
+            "name" => 'Mag Magazine',
+        ],
+        [
+            "id" => 3,
+            "name" => 'DC Kids',
+        ],
+        [
+            "id" => 4,
+            "name" => 'DC Universe',
+        ],
+        [
+            "id" => 5,
+            "name" => 'DC Power Visa',
+        ],
+    ];
+
+    return view('pages.home', compact("headerLinks", "FooterLinksOne", "FooterLinksOneShop", "FooterLinksTwo", "FooterLinksThree"));
+})->name('guest.home');
+
+Route::get('/comics', function () {
+
+    $headerLinks = [
+        [
+            "id" => 1,
+            "name" => 'home',
+            "url" => '/',
+        ],
+        [
+            "id" => 2,
+            "name" => 'comics',
+            "url" => '/comics',
+        ],
+        [
+            "id" => 3,
+            "name" => 'movies',
+            "url" => '/',
+        ],
+        [
+            "id" => 4,
+            "name" => 'tv',
+            "url" => '/',
+        ],
+        [
+            "id" => 5,
+            "name" => 'games',
+            "url" => '/',
+        ],
+        [
+            "id" => 6,
+            "name" => 'collectibles',
+            "url" => '/',
+        ],
+        [
+            "id" => 7,
+            "name" => 'videos',
+            "url" => '/',
+        ],
+        [
+            "id" => 8,
+            "name" => 'fans',
+            "url" => '/',
+        ],
+        [
+            "id" => 9,
+            "name" => 'news',
+            "url" => '/',
+        ],
+        [
+            "id" => 10,
+            "name" => 'shop',
+            "url" => '/',
         ],
     ];
     $comics = [
@@ -294,5 +468,5 @@ Route::get('/', function () {
         ],
     ];
 
-    return view('pages.home', compact("headerLinks", "comics", "FooterLinksOne", "FooterLinksOneShop", "FooterLinksTwo", "FooterLinksThree"));
-});
+    return view('pages.comics', compact("headerLinks", "comics", "FooterLinksOne", "FooterLinksOneShop", "FooterLinksTwo", "FooterLinksThree"));
+})->name('guest.comics');
